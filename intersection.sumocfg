@@ -1,0 +1,18 @@
+<configuration>
+    <input>
+        <net-file value="intersection.net.xml"/>
+        <route-files value="intersection.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value="0.1"/>
+    </time>
+    <random_number>
+        <seed value="42"/> <!-- 固定随机种子 -->
+    </random_number>
+    <output>
+        <tripinfo-output value="tripinfo.xml"/>
+        <emission-output value="emissions.xml"/>
+    </output>
+</configuration>

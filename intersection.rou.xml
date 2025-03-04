@@ -1,0 +1,25 @@
+<routes>
+    <!-- 车辆类型定义（参数与论文一致） -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="13.8" carFollowModel="ModifiedKrauss"/>
+
+    <!-- 北进口流量（左转31%） -->
+    <flow id="north_left" type="car" begin="0" end="3600" departLane="0" from="north_in" to="west_out" probability="0.31"/>
+    <flow id="north_straight" type="car" begin="0" end="3600" departLane="1" from="north_in" to="south_out" probability="0.45"/>
+    <flow id="north_right" type="car" begin="0" end="3600" departLane="4" from="north_in" to="east_out" probability="0.24"/>
+
+    <!-- 其他进口道类似（南、西、东进口） -->
+    <!-- 南进口 -->
+    <flow id="south_left" from="south_in" to="east_out" probability="0.18"/>
+    <flow id="south_straight" from="south_in" to="north_out" probability="0.71"/>
+    <flow id="south_right" from="south_in" to="west_out" probability="0.11"/>
+
+    <!-- 西进口 -->
+    <flow id="west_left" from="west_in" to="south_out" probability="0.17"/>
+    <flow id="west_straight" from="west_in" to="east_out" probability="0.75"/>
+    <flow id="west_right" from="west_in" to="north_out" probability="0.08"/>
+
+    <!-- 东进口（右转29%） -->
+    <flow id="east_left" from="east_in" to="north_out" probability="0.15"/>
+    <flow id="east_straight" from="east_in" to="west_out" probability="0.56"/>
+    <flow id="east_right" from="east_in" to="south_out" probability="0.29"/>
+</routes>
