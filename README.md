@@ -12,9 +12,13 @@ sumo的安装及使用可观看我的上一个文件
 ## 2. 代码结构
 
 ├── intersection.net.xml # 交叉口路网（手动配置的）
+
 ├── intersection.rou.xml # 交通流配置
+
 ├── ModifiedKrauss.cpp # 改进模型源码
+
 ├── analyze.py # 数据分析脚本
+
 └── README.md # 技术文档
 
 ## 3. 实验结果
